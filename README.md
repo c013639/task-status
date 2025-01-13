@@ -30,7 +30,8 @@ Before you begin, ensure you have met the following requirements:
 
 - **Bash Script**
 
-   ```#!/bin/bash
+   ```
+   #!/bin/bash
    git clone https://github.com/c013639/task-status.git
    cd task_status
    make build
