@@ -10,4 +10,4 @@ WORKDIR /src
 
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["python3", "task_status.py"]
+ENTRYPOINT ["python3", "custom_prom.py"]
