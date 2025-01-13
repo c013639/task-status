@@ -58,6 +58,13 @@ Before you begin, ensure you have met the following requirements:
 
 - **Run directly on local machine**
    ```bash
+   #!/bin/bash
+   git clone https://github.com/c013639/task-status.git
+   cd task_status
+   pip3 install virtualenv
+   python3 -m venv venv
+   source venv/bin/activate
+   pip3 install -r requirements.txt
    python3 custom_prom.py
    python3 sample_requests.py
 
