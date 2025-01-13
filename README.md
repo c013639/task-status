@@ -1,0 +1,51 @@
+max by (tool) (task_duration)
+# Task Status Flask Application
+
+## Overview
+
+Task Status is a Flask-based web application designed to receive task status from external systems. This application provides a simple interface for receiving the tasks exposed on "/api/tasks".
+Prometheus client exposed on "/metrics" fetches the task_duration metrics from task status API endpoint.
+
+## Features
+
+- Receive new task with “tool,task,status,duration" where status field can be only of completed, failed, succeeded values.
+- Duration field stores duration time in seconds.
+
+## Getting Started
+
+### Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+- python3.11 or later, pip3
+- docker
+- make
+- pytest
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/c013639/task-status.git
+   cd task_status
+   make build
+   make up
+   make pytest
+   make test
+   make deploy
+
+
+2. **make build**
+   This will build the python task_status and prometheus docker build images
+
+3. **make up**
+   This is to run the task_status application and prometheus image
+
+4. **make test**
+   To test the application with sample json data.
+
+5. **make pytest**
+   To test the application with certain use cases using pytest
+
+6. **make deploy**
+   Deploy the application in the kubernetes cluster.
