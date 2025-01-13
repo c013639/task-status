@@ -41,19 +41,19 @@ Before you begin, ensure you have met the following requirements:
    make deploy
    ```
 
-  **make build**
+  **make build:**
    This will build the python task_status and prometheus docker build images
 
-  **make up**
+  **make up:**
    This is to run the task_status application and prometheus image
 
-   **make test**
+   **make test:**
    To test the application with sample json data.
 
-  **make pytest**
+  **make pytest:**
    To test the application with certain use cases using pytest
 
-  **make deploy**
+  **make deploy:**
    Deploy the application in the kubernetes cluster.
 
 - **Run directly on local machine**
