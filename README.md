@@ -11,6 +11,10 @@ Prometheus client exposed on "/metrics" fetches the task_duration metrics from t
 - Receive new task with “tool,task,status,duration" where status field can be only of completed, failed, succeeded values.
 - Duration field stores duration time in seconds.
 
+## Sample Request
+
+   ```curl -X POST http://127.0.0.1:5000/api/tasks -H "Content-Type: application/json" -d '{"tool": "downgrade",  "task": "healthchecks",  "status": "completed",  "duration": 170}
+
 ## Getting Started
 
 ### Prerequisites
@@ -35,17 +39,17 @@ Before you begin, ensure you have met the following requirements:
    make deploy
 
 
-2. **make build**
+   **make build**
    This will build the python task_status and prometheus docker build images
 
-3. **make up**
+   **make up**
    This is to run the task_status application and prometheus image
 
-4. **make test**
+   **make test**
    To test the application with sample json data.
 
-5. **make pytest**
+   **make pytest**
    To test the application with certain use cases using pytest
 
-6. **make deploy**
+   **make deploy**
    Deploy the application in the kubernetes cluster.
