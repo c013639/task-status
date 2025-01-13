@@ -28,7 +28,7 @@ Before you begin, ensure you have met the following requirements:
 
 ### Installation
 
-- **Using Docker**
+- **Run inside container**
 
    ```
    #!/bin/bash
@@ -56,5 +56,9 @@ Before you begin, ensure you have met the following requirements:
   **make deploy**
    Deploy the application in the kubernetes cluster.
 
-- **Using Python directly on local**
+- **Run directly on local machine**
+   ```
    python3 custom_prom.py
+   python3 sample_requests.py
+
+   ```
