@@ -67,4 +67,3 @@ Before you begin, ensure you have met the following requirements:
    **Query to find longest task running per tool**
    ```bash
     max by (tool) (task_duration)
-    ```
