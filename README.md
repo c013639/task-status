@@ -1,4 +1,3 @@
-max by (tool) (task_duration)
 # Task Status Flask Application
 
 ## Overview
@@ -13,7 +12,8 @@ Prometheus client exposed on "/metrics" fetches the task_duration metrics from t
 
 ## Sample Request
 
-   ```curl -X POST http://127.0.0.1:5000/api/tasks -H "Content-Type: application/json" -d '{"tool": "downgrade",  "task": "healthchecks",  "status": "completed",  "duration": 170}
+   ```bash
+   curl -X POST http://127.0.0.1:5000/api/tasks -H "Content-Type: application/json" -d '{"tool": "downgrade",  "task": "healthchecks",  "status": "completed",  "duration": 170}'
    ```
 
 ## Getting Started
@@ -30,7 +30,7 @@ Before you begin, ensure you have met the following requirements:
 
 - **Run inside container**
 
-   ```
+   ```bash
    #!/bin/bash
    git clone https://github.com/c013639/task-status.git
    cd task_status
@@ -57,8 +57,14 @@ Before you begin, ensure you have met the following requirements:
    Deploy the application in the kubernetes cluster.
 
 - **Run directly on local machine**
-   ```
+   ```bash
    python3 custom_prom.py
    python3 sample_requests.py
 
    ```
+
+### Prometheus Query
+   **Query to find longest task running per tool**
+   ```bash
+    max by (tool) (task_duration)
+    ```
